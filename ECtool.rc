@@ -1,0 +1,266 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\ECtool.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""     // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\ECtool.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 170, 62
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About ECtool"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,14,14,21,20
+    LTEXT           "ECtool, Version 1.0",IDC_STATIC,42,14,114,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2014",IDC_STATIC,42,26,114,8
+    DEFPUSHBUTTON   "OK",IDOK,113,41,50,14,WS_GROUP
+END
+
+IDD_ECTOOL_DIALOG DIALOGEX 0, 0, 324, 236
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "ECtool"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_LOAD_FILE,23,20,197,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "LoadFile",ID_BUTTON_LOAD_FILE,266,25,37,18
+    PUSHBUTTON      "Pause",IDC_BUTTON_PAUSE,90,137,40,14
+    PUSHBUTTON      ">>",IDC_BUTTON_STEP,160,137,39,14
+    CONTROL         "CheckOrig",IDC_CHECK_ORIG,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,89,49,10
+    CONTROL         "CheckDec1",IDC_CHECK_DEC1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,106,51,10
+    CONTROL         "CheckDec2",IDC_CHECK_DEC2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,123,51,10
+    PUSHBUTTON      "Play",IDC_BUTTON_PLAY,30,137,37,14
+    PUSHBUTTON      "<<",IDC_BUTTON_STEP_BEFORE,216,137,37,14
+    EDITTEXT        IDC_EDIT_WIDTH,46,37,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_HEIGHT,115,37,40,14,ES_AUTOHSCROLL
+    CTEXT           "Width:",IDC_STATIC_WIDTH,15,37,35,9
+    LTEXT           "Height:",IDC_STATIC_HEIGHT,89,37,25,14
+    PUSHBUTTON      "LoadDecoder",IDC_BUTTON_DEC1_DLL,91,101,50,14
+    CONTROL         "packet",IDC_RADIO_3,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,51,67,37,10
+    CONTROL         "todo",IDC_RADIO_5,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,96,67,31,10
+    CONTROL         "todo",IDC_RADIO_10,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,131,67,31,10
+    CONTROL         "P slice",IDC_RADIO_P,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,233,67,35,10
+    CONTROL         "I slice",IDC_RADIO_I,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,190,67,34,10
+    CONTROL         "0%",IDC_RADIO_NO,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,15,67,27,10
+    LTEXT           "FPS:",IDC_STATIC_HEIGHT2,157,37,25,14
+    EDITTEXT        IDC_EDIT_FPS,180,37,40,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "ViewStepInfo",IDC_BUTTON_SHOW_STEP_INFO,149,101,50,14
+    PUSHBUTTON      "ViewInfo",IDC_BUTTON_SHOW_ALL_INFO,205,101,50,14
+    CONTROL         "YUV",IDC_RADIO_YUV,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,227,21,29,10
+    CONTROL         "264",IDC_RADIO_264,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,226,37,28,10
+END
+
+IDD_INFO_DIALOG DIALOGEX 0, 0, 280, 118
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Static Infos"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Frame No:",IDC_STATIC_FRAME_NO,7,24,34,12
+    LTEXT           "PSNR:",IDC_STATIC_PSNR,7,47,34,12
+    LTEXT           "SCORE:",IDC_STATIC_SCORE,7,73,34,12
+    EDITTEXT        IDC_EDIT_FRAMENO_ORIG,52,24,48,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT_PSNR_ORIG,52,47,48,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT_FRAMENO_DEC1,119,24,48,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT_FRAMENO_DEC2,183,24,48,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT_PSNR_DEC1,119,47,48,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT_PSNR_DEC2,183,47,48,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT_SCORE_ORIG,52,73,48,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT_SCORE_DEC1,119,73,48,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_SCORE_DEC2,183,73,48,14,ES_AUTOHSCROLL
+    GROUPBOX        "Orig",IDC_STATIC,47,7,62,104
+    GROUPBOX        "Dec1",IDC_STATIC,109,7,62,104
+    GROUPBOX        "Dec2",IDC_STATIC,170,7,62,104
+    LTEXT           "Avg Score:",IDC_STATIC_SCORE2,7,93,34,18
+    EDITTEXT        IDC_EDIT_AVG_SCORE,47,93,24,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT_FRAME_NUM,81,93,24,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "/",IDC_STATIC_PSNR2,78,94,8,8
+    EDITTEXT        IDC_EDIT_AVG_SCORE2,113,93,24,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT_FRAME_NUM2,147,93,24,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "/",IDC_STATIC_PSNR3,144,93,8,8
+    EDITTEXT        IDC_EDIT_AVG_SCORE3,174,93,24,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT_FRAME_NUM3,208,93,24,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "/",IDC_STATIC_PSNR4,205,93,8,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "TODO: <Company name>"
+            VALUE "FileDescription", "TODO: <File description>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "ECtool.exe"
+            VALUE "LegalCopyright", "TODO: (c) <Company name>.  All rights reserved."
+            VALUE "OriginalFilename", "ECtool.exe"
+            VALUE "ProductName", "TODO: <Product name>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 163
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 55
+    END
+
+    IDD_ECTOOL_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 317
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 229
+    END
+
+    IDD_INFO_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 273
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 111
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About ECtool..."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "res\ECtool.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"     // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
