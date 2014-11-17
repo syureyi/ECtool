@@ -711,7 +711,7 @@ int CECtoolDlg::ReadBSToSample(DEMO_WINDOW_TYPE eWindowType)
 			m_bInitDec1 = TRUE;
 			break;
 		case DEMO_WINDOW_DEC2:
-			m_bEnableEC = true;
+			m_bEnableEC =false;
 			iErrorConMethod = (int)ERROR_CON_FRAME_COPY;
 			m_bInitDec2 = TRUE;
 			break;
