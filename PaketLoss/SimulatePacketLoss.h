@@ -1,10 +1,7 @@
-#ifndef _SIMULATOR_PACKET_LOSS_H_
-#define _SIMULATOR_PACKET_LOSS_H_
-
 #include <vector>
 #include <string>
 
-typedef enum {
+enum EPlsNalUnitType {
   PLS_NAL_UNIT_UNSPEC_0			= 0,
   PLS_NAL_UNIT_CODED_SLICE		= 1,
   PLS_NAL_UNIT_CODED_SLICE_DPA	= 2,
@@ -37,13 +34,13 @@ typedef enum {
   PLS_NAL_UNIT_UNSPEC_29			= 29,
   PLS_NAL_UNIT_UNSPEC_30			= 30,
   PLS_NAL_UNIT_UNSPEC_31			= 31
-}EPlsNalUnitType;
+};
 
-typedef enum  {
+enum EPlsVclType {
   PLS_NON_VCL			= 0,
   PLS_VCL				= 1,
   PLS_NOT_APP			= 2
-}EPlsVclType;
+};
 
 const EPlsVclType g_kePlsTypeMap[32][2] = {
   { PLS_NON_VCL,	PLS_NON_VCL },	// 0: PLS_NAL_UNIT_UNSPEC_0
@@ -96,15 +93,6 @@ typedef struct SLost_Statics {
   bool isLost;
 } SLostStatics;
 
-//typedef struct SLost_Type{
-//	PACKETLOSS_3PERCENT;
-//    PACKETLOSS_5PERCENT;
-//	PACKETLOSS_10PERCENT;
-//	ISLICELOSS;
-//	PSLICELOSS
-//	
-//}SLostType
-
 typedef struct SSlice_LossRatio {
   int iSPSLossRatio;
   int iSubSPSLossRatio;
@@ -153,7 +141,8 @@ public:
   SOutBuffStatics SimulateNALLoss (const unsigned char* pSrc,  int iSrcLen);
   // pSrc is pointer to AU buffer or H264 file buffer, iSrcLen is the buffer lenth, 
   // pLossChars is the pointer to input loss characters buffer, iLossCharLen is the buffer lenth
-  SOutBuffStatics SimulateNALLoss (const unsigned char* pSrc,  int iSrcLen, unsigned char* pLossChars, int iLossCharLen);
+  // bResetPos, true, loss from 0 pos in pLossChars; false, pos will be recoded inside
+  SOutBuffStatics SimulateNALLoss (const unsigned char* pSrc,  int iSrcLen, unsigned char* pLossChars, int iLossCharLen, bool bResetPos);
   SLossstatusInfo GetLossStatus ();
 private:
   std::vector<SLostStatics>* GetLossDetail() {return &m_ListSLostSim;};
@@ -166,9 +155,7 @@ private:
   int m_SliceLossRatio[32];
   int m_iOutPutLen;
   int iLossIdx;
-  
   //string cInPacketLossFile;
   //string cOutPacketLossFile;
 };
 
-#endif

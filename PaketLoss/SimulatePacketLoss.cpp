@@ -172,7 +172,10 @@ SOutBuffStatics CPacketLossSimulator::SimulateNALLoss (const unsigned char* pSrc
   return sBuffStatics;
 }
 
-SOutBuffStatics CPacketLossSimulator::SimulateNALLoss (const unsigned char* pSrc,  int iSrcLen, unsigned char* pLossChars, int iLossCharLen) {
+SOutBuffStatics CPacketLossSimulator::SimulateNALLoss (const unsigned char* pSrc,  int iSrcLen, unsigned char* pLossChars, int iLossCharLen, bool bResetPos) {
+  if(bResetPos) {
+    iLossIdx = 0;
+  }
   delete [] m_pOutPutBuff;
   m_pOutPutBuff = NULL;
   m_pOutPutBuff = new unsigned char[iSrcLen];
