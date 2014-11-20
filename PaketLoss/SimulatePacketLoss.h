@@ -1,7 +1,9 @@
+#ifndef _SIMULATOR_PACKET_LOSS_H_
+#define _SIMULATOR_PACKET_LOSS_H_
 #include <vector>
 #include <string>
 
-enum EPlsNalUnitType {
+typedef enum{
   PLS_NAL_UNIT_UNSPEC_0			= 0,
   PLS_NAL_UNIT_CODED_SLICE		= 1,
   PLS_NAL_UNIT_CODED_SLICE_DPA	= 2,
@@ -34,13 +36,13 @@ enum EPlsNalUnitType {
   PLS_NAL_UNIT_UNSPEC_29			= 29,
   PLS_NAL_UNIT_UNSPEC_30			= 30,
   PLS_NAL_UNIT_UNSPEC_31			= 31
-};
+}EPlsNalUnitType;
 
-enum EPlsVclType {
+typedef enum{
   PLS_NON_VCL			= 0,
   PLS_VCL				= 1,
   PLS_NOT_APP			= 2
-};
+}EPlsVclType;
 
 const EPlsVclType g_kePlsTypeMap[32][2] = {
   { PLS_NON_VCL,	PLS_NON_VCL },	// 0: PLS_NAL_UNIT_UNSPEC_0
@@ -158,4 +160,4 @@ private:
   //string cInPacketLossFile;
   //string cOutPacketLossFile;
 };
-
+#endif

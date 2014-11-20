@@ -712,7 +712,7 @@ int CECtoolDlg::ReadBSToSample(DEMO_WINDOW_TYPE eWindowType)
 			break;
 		case DEMO_WINDOW_DEC2:
 			m_bEnableEC =false;
-			iErrorConMethod = (int)ERROR_CON_FRAME_COPY;
+			iErrorConMethod = (int)ERROR_CON_SLICE_COPY_CROSS_IDR_FREEZE_RES_CHANGE;
 			m_bInitDec2 = TRUE;
 			break;
 	}
@@ -739,6 +739,8 @@ int CECtoolDlg::ReadBSToSample(DEMO_WINDOW_TYPE eWindowType)
 		return iFrameCount;
 		
 	}
+	else
+		 return 0;
 }
 
 

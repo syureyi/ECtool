@@ -187,7 +187,7 @@ void ECSample::LossSimulator()
 
 	  }
 	  if(iFileSizeInLossFile>0)
-		  sOutBuff = m_cPaketLossSimulator.SimulateNALLoss(pBuf,iFileSize,pBufInLoss,iFileSizeInLossFile);
+		  sOutBuff = m_cPaketLossSimulator.SimulateNALLoss(pBuf,iFileSize,pBufInLoss,iFileSizeInLossFile,true);
 	  else
 	  sOutBuff = m_cPaketLossSimulator.SimulateNALLoss(pBuf,iFileSize);
 

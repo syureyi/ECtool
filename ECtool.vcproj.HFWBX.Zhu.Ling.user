@@ -10,7 +10,7 @@
 			>
 			<DebugSettings
 				Command="$(TargetPath)"
-				WorkingDirectory="E:\ECtool\ECtool"
+				WorkingDirectory="E:\ECtool"
 				CommandArguments="test.264.loss"
 				Attach="false"
 				DebuggerType="3"
